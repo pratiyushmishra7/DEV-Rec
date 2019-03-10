@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Form</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+     <ul class="nav justify-content-end">
+                    <% if(true){ %>
+                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
+                    <% } else { %>
+                        <li class="nav-item"><a class="nav-link" href="#">Signed In As <%= currentUser.username %></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    <% } %>
+                </ul>
+
+        <h1>Sign Up!</h1>
+        
+        <form action="/register" method="post">
+            <input type="text" name="username" placeholder="username">
+            <input type="number" name="number" placeholder="number">
+            <input type="password" name="password" placeholder="password">
+            <button>Sign Up</button>
+        </form>
+</body>
+</html>
