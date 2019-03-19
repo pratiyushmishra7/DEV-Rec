@@ -35,52 +35,7 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// SCHEMA SETUP
 
-
-// Campground.create(
-//      {
-//          name: "Jaisalmer, Rajasthan", 
-//          image: "https://ihplb.b-cdn.net/wp-content/uploads/2014/06/Camping-in-Jaisalmer.jpg",
-//          description : "The natural setting of Jaisalmer makes it a perfect paradise for campers. Fondly known as the ‘Golden City of India’, Jaisalmer is indeed a trekker’s paradise. The famous Sam Sand Dunes offer some of the amazing camping sites in India. The son touched gleaming sands create a silhouette against the sand dunes. However, if you want to indulge yourself, The Serai will provide you a wonderful experience. It houses 21 large canvas tents built on a base of Jaisalmer stone, set away from it all on 30 acres of desert scrub"
-         
-//      },
-//      function(err, campground){
-//       if(err){
-//           console.log(err);
-//       } else {
-//           console.log("NEWLY CREATED CAMPGROUND: ");
-//           console.log(campground);
-//       }
-//     });
-// app.get("/campgrounds/:id/comments/new",isLoggedIn, function(req, res){
-//     // find campground by id
-//     Campground.findById(req.params.id, function(err, campground){
-//         if(err){
-//             console.log(err);
-//         } else {
-//              res.render("comments/new", {campground: campground,currentUser:req.user});
-//         }
-//     });
-// });
-    
-//     function isLoggedIn(req, res, next){
-//     if(req.isAuthenticated()){
-//         return next();
-//     }
-//     res.redirect("/login");
-// }
-
-
-//INDEX - show all campgrounds
-
-
-
-//  ===========
-// AUTH ROUTES
-//  ===========
-
-// show register form
 app.use(indexRoutes);
 app.use(campgroundRoutes);
 app.use(commentRoutes);
